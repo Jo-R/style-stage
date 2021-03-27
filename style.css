@@ -3,6 +3,8 @@
 
 :root {
   --color-primary: hsl(15deg 98% 43%);
+  --color-primary-light: hsl(15deg 98% 43% / 0.3);
+  --color-secondary: hsl(210deg, 86%, 40%);
   --color-background: hsl(10deg 100% 97%);
   --font-body: hsl(140deg 51% 10%);
 }
@@ -120,6 +122,7 @@ a:hover {
 
 ul {
   list-style: none;
+  padding: 0;
 }
 
 .skip-link:not(:focus):not(:active) {
@@ -170,13 +173,12 @@ header div {
 
 svg {
   width: 1rem;
-  fill: var(--color-primary);
+  fill: var(--color-secondary);
 }
 
 nav ul {
   display: flex;
   justify-content: space-around;
-  padding: 0;
 }
 
 nav li {
@@ -202,4 +204,21 @@ nav li a {
 nav li a:hover {
   text-decoration: none;
   font-style: normal;
+}
+
+#about ul {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  justify-content: center;
+}
+
+#about ul li {
+  transform: rotate(-3deg);
+  border: 1px solid var(--color-primary);
+  border-radius: 5px;
+  padding: 0.5rem 1rem;
+  text-decoration: none;
+  color: var(--color-secondary);
+  width: fit-content;
 }
