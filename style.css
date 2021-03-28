@@ -252,6 +252,7 @@ section {
 article h2 {
   display: inline-block;
   width: fit-content;
+  width: -moz-fit-content;
   margin: 0 auto;
   border-left: 2px solid var(--color-primary-light);
   padding-left: 0.5rem;
@@ -289,6 +290,7 @@ blockquote {
   text-decoration: none;
   color: var(--color-primary);
   width: fit-content;
+  width: -moz-fit-content;
 }
 
 .link-guidelines {
@@ -298,6 +300,7 @@ blockquote {
   border-radius: 5px;
   text-align: center;
   width: fit-content;
+  width: -moz-fit-content;
   margin: 0 auto;
   transition: transform 250ms ease-in;
 }
@@ -333,6 +336,7 @@ ol li::before {
   transform-origin: top left;
   text-align: center;
   width: fit-content;
+  width: -moz-fit-content;
   margin: 0 auto;
 }
 
@@ -372,6 +376,7 @@ aside > div > a {
   border-radius: 5px;
   text-align: center;
   width: fit-content;
+  width: -moz-fit-content;
   margin: 0 auto;
   transition: transform 250ms ease-in;
 }
@@ -408,6 +413,7 @@ aside > div > a:hover {
 
 .profile ul {
   width: fit-content;
+  width: -moz-fit-content;
   border-bottom: 1px solid var(--color-primary-light);
   border-right: 1px solid var(--color-primary-light);
   padding-right: 0.5rem;
@@ -424,6 +430,7 @@ aside > div > a:hover {
 .profile li span:first-child {
   color: var(--color-primary);
   width: fit-content;
+  width: -moz-fit-content;
 }
 
 #styles {
@@ -446,6 +453,7 @@ aside > div > a:hover {
   grid-column-end: span 2;
   word-wrap: wrap;
   width: fit-content;
+  width: -moz-fit-content;
   border-bottom: 1px solid var(--color-primary-light);
   border-right: 1px solid var(--color-primary-light);
   padding-right: 0.5rem;
