@@ -99,6 +99,14 @@ body {
   grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
 }
 
+@media only screen and (max-width: 600px) {
+  body {
+    margin: 1rem;
+    width: 100%;
+    grid-template-columns: minmax(0, 1fr);
+  }
+}
+
 h1,
 h2,
 h3,
@@ -160,7 +168,7 @@ header div {
   transform: skew(10deg);
 }
 
-.link-github {
+header .link-github {
   display: inline-block;
   margin-top: 1rem;
   border: 2px solid var(--color-primary);
@@ -172,10 +180,20 @@ header div {
   transition: transform 250ms ease-in;
 }
 
-.link-github:hover {
+header .link-github:hover {
   transform: skewX(-10deg);
   text-decoration: none;
   font-style: normal;
+}
+
+@media only screen and (max-width: 600px) {
+  header {
+    transform: skewX(-3deg);
+  }
+
+  header div {
+    transform: skewX(3deg);
+  }
 }
 
 svg {
@@ -190,9 +208,11 @@ nav {
 nav ul {
   display: flex;
   justify-content: space-around;
+  flex-wrap: wrap;
 }
 
 nav li {
+  margin-top: 1rem;
   border: 2px solid var(--color-primary);
   border-radius: 5px;
   padding: 0.5rem 1rem;
@@ -222,6 +242,12 @@ main {
   justify-self: center;
 }
 
+@media only screen and (max-width: 600px) {
+  main {
+    width: 100%;
+  }
+}
+
 article {
   margin-top: 3rem;
 }
@@ -246,6 +272,12 @@ blockquote {
   padding: 1rem;
   margin: 1rem 0;
   transform: skewX(-10deg);
+}
+
+@media only screen and (max-width: 600px) {
+  blockquote {
+    transform: skewX(-3deg);
+  }
 }
 
 #about ul {
@@ -299,7 +331,8 @@ ol li::before {
   color: var(--color-secondary-light);
 }
 
-article footer {
+#files {
+  padding-top: 0.5rem;
   border: 2px solid var(--color-secondary-light);
   border-radius: 5px;
   transform: skewX(-10deg);
@@ -308,7 +341,7 @@ article footer {
   margin: 0 auto;
 }
 
-article footer a {
+#files a {
   display: inline-block;
   margin: 1rem;
   border: 2px solid var(--color-secondary);
@@ -318,9 +351,18 @@ article footer a {
   transition: transform 250ms ease-in;
 }
 
-article footer a:hover {
+#files a:hover {
   font-style: normal;
   transform: skewX(-2deg);
+}
+
+@media only screen and (max-width: 600px) {
+  #files {
+    transform: skewX(-3deg);
+  }
+  #files a {
+    transform: skewX(3deg);
+  }
 }
 
 aside {
@@ -346,9 +388,36 @@ aside > div > a:hover {
 
 .profile {
   grid-column: 1;
+}
+
+#profile-title:before,
+#profile-title:after {
+  content: "✭";
+  color: gold;
+  font-size: 1.2rem;
+}
+
+#profile-title:before {
+  margin-right: 0.2rem;
+}
+
+#profile-title:after {
+  margin-left: 0.2rem;
+}
+
+.profile .container {
   display: flex;
   flex-direction: column;
   align-items: center;
+}
+
+.profile ul {
+  width: fit-content;
+  border-bottom: 1px solid var(--color-primary-light);
+  border-right: 1px solid var(--color-primary-light);
+  padding-right: 0.5rem;
+  padding-bottom: 0.5rem;
+  transform: skewX(-10deg);
 }
 
 .profile li {
@@ -362,8 +431,14 @@ aside > div > a:hover {
   width: fit-content;
 }
 
-.styles {
+#styles {
   grid-column: 2;
+}
+
+@media only screen and (max-width: 600px) {
+  #styles {
+    grid-column: 1;
+  }
 }
 
 .features {
@@ -387,11 +462,26 @@ aside > div > a:hover {
   grid-column-start: 2;
 }
 
-footer {
+.page-footer {
   grid-column: 1 / span 2;
   margin-top: 2rem;
   margin-left: -4rem;
   margin-right: -4rem;
   padding: 1rem 4rem;
   border-top: 2px solid var(--color-primary-light);
+  transform: skewy(-1deg);
+  transform-origin: top right;
+}
+
+.page-footer div {
+  transform: skewY(1deg);
+  padding-top: 1rem;
+}
+
+.page-footer ul {
+  display: flex;
+}
+
+.page-footer li {
+  margin-right: 2rem;
 }
