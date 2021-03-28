@@ -213,6 +213,8 @@ nav li a:hover {
 
 main {
   grid-column: 1 / span 2;
+  width: 80ch;
+  justify-self: center;
 }
 
 article {
@@ -297,4 +299,9 @@ aside {
 
 footer {
   grid-column: 1 / span 2;
+  margin-top: 2rem;
+  margin-left: -4rem;
+  margin-right: -4rem;
+  padding: 1rem 4rem;
+  border-top: 2px solid var(--color-secondary-light);
 }
