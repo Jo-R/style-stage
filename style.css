@@ -265,6 +265,7 @@ blockquote {
   padding: 1rem;
   margin: 1rem 0;
   transform: skewX(-10deg);
+  transform-origin: top left;
 }
 
 @media only screen and (max-width: 600px) {
@@ -329,6 +330,7 @@ ol li::before {
   border: 2px solid var(--color-secondary-light);
   border-radius: 5px;
   transform: skewX(-10deg);
+  transform-origin: top left;
   text-align: center;
   width: fit-content;
   margin: 0 auto;
@@ -477,4 +479,5 @@ aside > div > a:hover {
 
 .page-footer li {
   margin-right: 2rem;
+  border-bottom: 1px solid var(--color-secondary);
 }
