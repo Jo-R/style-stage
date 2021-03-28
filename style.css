@@ -4,7 +4,8 @@
 :root {
   --color-primary: hsl(10deg 98% 40%);
   --color-primary-light: hsl(15deg 98% 43% / 0.3);
-  --color-secondary: hsl(210deg, 86%, 40%);
+  --color-secondary: hsl(210deg 80% 47%);
+  --color-secondary-light: hsl(210deg 80% 47% / 0.5);
   --color-background: hsl(10deg 100% 97%);
   --font-body: hsl(140deg 51% 10%);
 }
@@ -87,9 +88,15 @@ select {
 
 /* End of reset **/
 
+html {
+  background-color: var(--color-background);
+}
+
 body {
   background-color: var(--color-background);
-  padding: 2rem;
+  margin: 4rem;
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
 }
 
 h1,
@@ -137,6 +144,7 @@ ul {
 }
 
 header {
+  grid-column: 1 / span 2;
   border: 5px solid var(--color-primary);
   border-radius: 5px;
   padding: 2rem;
@@ -170,6 +178,10 @@ svg {
   fill: var(--color-secondary);
 }
 
+nav {
+  grid-column: 1 / span 2;
+}
+
 nav ul {
   display: flex;
   justify-content: space-around;
@@ -199,6 +211,10 @@ nav li a:hover {
   font-style: normal;
 }
 
+main {
+  grid-column: 1 / span 2;
+}
+
 article {
   margin-top: 3rem;
 }
@@ -226,7 +242,7 @@ blockquote {
 }
 
 article footer {
-  border: 2px solid var(--color-secondary);
+  border: 2px solid var(--color-secondary-light);
   border-radius: 5px;
   transform: skewX(-10deg);
   text-align: center;
@@ -264,4 +280,21 @@ article footer a:hover {
   text-decoration: none;
   color: var(--color-secondary);
   width: fit-content;
+}
+
+aside {
+  margin-top: 2rem;
+  text-align: center;
+}
+
+#profile {
+  grid-column: 1;
+}
+
+#styles {
+  grid-column: 2;
+}
+
+footer {
+  grid-column: 1 / span 2;
 }
